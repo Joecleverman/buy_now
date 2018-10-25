@@ -18,3 +18,8 @@ Show a list of products
 2. Jewerly Rose Bali Style Rope Style - $44 - still available!
 
 Which product do you want to learn more about?
+1
+
+What is a deal?
+
+A deal has a name A deal has a price A deal has a URL a deal has an avaiablity.
