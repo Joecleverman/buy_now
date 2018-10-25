@@ -1,6 +1,8 @@
 class BuyNow::CLI
 
   def call
+    puts "\nWelcome to Buy Now!".light_blue
+    puts "-----------------------------"
     list_buy
     menu
     goodbye
