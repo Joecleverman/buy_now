@@ -1,5 +1,7 @@
-require "buy_now/version"
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
 
-module BuyNow
-  # Your code goes here...
-end
+require_relative "./buy_now/version"
+require_relative './buy_now/deal'
+require_relative './buy_now/cli'
