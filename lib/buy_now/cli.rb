@@ -24,7 +24,7 @@ class BuyNow::CLI
       input = gets.strip.downcase
 
       if input.to_i > 0
-        the_deal = @buy[input.to_i-1]
+        the_now = @buy[input.to_i-1]
         puts "#{the_now.name} - #{the_now.price} - #{the_now.availability}"
       elsif input == "list"
         list_buy
