@@ -20,7 +20,7 @@ class BuyNow::Buy
 
     now = self.new
     now.name = doc.search("h1.product_title entry-title").text.strip
-    now.price = doc.search("span.woocommerce-Price-amount amount").text.gsub("Buy it.", "").strip
+    now.price = doc.search("span.woocommerce-Price-amount amount").text.strip
     now.url = "https://shopanu.com"
     now.availability = true
 
