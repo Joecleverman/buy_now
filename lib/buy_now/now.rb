@@ -19,8 +19,8 @@ class BuyNow::Buy
     doc = Nokogiri::HTML(open("https://shopanu.com/"))
 
     now = self.new
-    now.name = doc.search("section.features h2").text.strip
-    now.price = doc.search("button.buy-button").text.gsub("Buy it.", "").strip
+    now.name = doc.search("h1.product_title entry-title").text.strip
+    now.price = doc.search("span.woocommerce-Price-amount amount").text.gsub("Buy it.", "").strip
     now.url = "https://shopanu.com"
     now.availability = true
 
