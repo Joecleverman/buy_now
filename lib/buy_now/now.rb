@@ -16,7 +16,7 @@ class BuyNow::Buy
 
 
   def self.scrape_shopanu
-    doc = Nokogiri::HTML(open("https://shopanu.com/"))
+    doc = Nokogiri::HTML(open("https://shopanu.com"))
 
     now = self.new
     now.name = doc.search("h1.product_title entry-title").text.strip
