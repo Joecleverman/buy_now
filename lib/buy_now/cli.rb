@@ -1,5 +1,5 @@
 class BuyNow::CLI
-
+ attr_accessor :buy
   def call
     list_buy
     menu
@@ -12,7 +12,7 @@ class BuyNow::CLI
     puts "-----------------------------"
     puts
     puts "Today's item to buy:"
-    @buy = BuyNow::Deal.buying
+    @buy = BuyNow::Buy.buying
     @buy.each.with_index(1) do |now, i|
       puts "#{i}. #{now.name} - #{now.price} - #{now.availability}"
     end

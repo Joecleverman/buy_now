@@ -11,4 +11,4 @@ require "buy_now"
 # Pry.start
 
 require "irb"
-IRB.start
+IRB.start(__FILE__)

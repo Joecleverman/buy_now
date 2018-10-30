@@ -15,7 +15,7 @@ class BuyNow::Buy
   end
 
 
-  def self.scrape_shopanu
+  def
     doc = Nokogiri::HTML(open("https://shopanu.com"))
 
     now = self.new
