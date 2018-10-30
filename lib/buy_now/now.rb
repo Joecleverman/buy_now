@@ -18,14 +18,14 @@ class BuyNow::Buy
 
 
   def self.scrape_shopanu
-     doc=Nokogiri::HTML(open("https://shopanu.com"))
+    doc=Nokogiri::HTML(open("https://shopanu.com"))
     #binding.pry
     now = self.new
-    # now.name = doc.search("h1.product_title entry-title").text.strip
-    # now.price = doc.search("span.woocommerce-Price-amount amount").text.strip
-    # now.url = "https://shopanu.com"
-    # now.availability = true
-    #
-    # now
+    now.name = doc.search("h1.product_title entry-title").text.strip
+    now.price = doc.search("span.woocommerce-Price-amount amount").text.strip
+    now.url = "https://shopanu.com"
+    now.availability = true
+
+    now
   end
 end
