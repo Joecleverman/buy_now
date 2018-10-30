@@ -8,7 +8,7 @@ class BuyNow::CLI
 
   def list_buy
     # here doc - http://blog.jayfields.com/2006/12/ruby-multiline-strings-here-doc-or.html
-    puts "Welcome to Buy Now!".light_blue
+    puts "Welcome to Buy Now!"
     puts "-----------------------------"
     puts
     puts "Today's item to buy:"
