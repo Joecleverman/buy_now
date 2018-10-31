@@ -31,7 +31,7 @@ class BuyNow::CLI
       elsif input == "list"
         list_buy
       else
-        puts "Not sure what you want, type list or exit.🚫"
+      goodbye
       end
     end
   end
