@@ -10,10 +10,9 @@ class BuyNow::CLI
   def list_buy
     # here doc - http://blog.jayfields.com/2006/12/ruby-multiline-strings-here-doc-or.html
     puts "--------------------"
-    puts "Welcome to Buy Now!".blue.bold
+    puts "Welcome to Buy Now!".yellow
     puts "--------------------"
-    puts
-    puts "Today's item to buy:".cyan
+    puts "\nToday's item to buy:".cyan
     @buy = BuyNow::Buy.buying
     @buy.each.with_index(1) do |now, i|
       puts "#{i}. #{now.name} - #{now.price} - #{now.availability}"
@@ -32,12 +31,12 @@ class BuyNow::CLI
       elsif input == "list"
         list_buy
       else
-        puts "Not sure what you want, type list or exit."
+        puts "Not sure what you want, type list or exit.🚫"
       end
     end
   end
 
   def goodbye
-    puts "See you tomorrow for more shopping!!!"
+    puts "See you tomorrow for more shopping 👋!!!".blue
   end
 end
