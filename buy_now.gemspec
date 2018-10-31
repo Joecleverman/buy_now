@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Some items you can buy.}
   spec.description   = %q{CLI app that scrapes information and returns some items available for buying
-                          and their details from shopanu. https://shopanu.com}
+                          and their details from watchshop. https://www.watchshop.com/mens-watches.html}
   spec.homepage      = "https://github.com/Joecleverman/buy_now"
   spec.license       = "MIT"
 

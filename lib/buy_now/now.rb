@@ -1,5 +1,3 @@
-
-
 class BuyNow::Buy
   attr_accessor :name, :price, :availability, :url
 
@@ -18,12 +16,12 @@ class BuyNow::Buy
 
 
   def self.scrape_shopanu
-    doc=Nokogiri::HTML(open("https://shopanu.com"))
+    doc = Nokogiri::HTML(open("https://www.watchshop.com/unisex-casio-classic-leisure-alarm-chronograph-watch-a168wg-9ef-p99932788.html"))
     #binding.pry
     now = self.new
-    now.name = doc.search("h1.product_title entry-title").text.strip
-    now.price = doc.search("span.woocommerce-Price-amount amount").text.strip
-    now.url = "https://shopanu.com"
+    now.name = doc.css("h1.product-indi-title.heading-font").text.strip
+    now.price = doc.css("div.newprice").text.strip
+    now.url = "https://www.watchshop.com/mens-watches.html"
     now.availability = true
 
     now
