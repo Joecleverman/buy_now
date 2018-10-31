@@ -24,7 +24,7 @@ class BuyNow::Buy
     now.name = doc.css("h1.product-indi-title.heading-font").text.strip
     now.price = doc.css("div.newprice").text.strip
     now.url = "https://www.watchshop.com/mens-watches.html"
-    now.availability = true
+    now.availability = doc.css("div.product-indi-stock.text-primary.font-weight-semi-bold").text.strip
 
     now
   end
@@ -36,7 +36,7 @@ class BuyNow::Buy
     now.name = doc.css("h1.product-indi-title.heading-font").text.strip
     now.price = doc.css("div.newprice").text.strip
     now.url = "https://www.watchshop.com/mens-watches.html"
-    now.availability = true
+    now.availability = doc.css("div.product-indi-stock.text-primary.font-weight-semi-bold").text.strip
 
     now
   end
@@ -47,7 +47,7 @@ class BuyNow::Buy
     now.name = doc.css("h1.product-indi-title.heading-font").text.strip
     now.price = doc.css("div.newprice").text.strip
     now.url = "https://www.watchshop.com/mens-watches.html"
-    now.availability = true
+    now.availability = doc.css("div.product-indi-stock.text-primary.font-weight-semi-bold").text.strip
 
     now
   end

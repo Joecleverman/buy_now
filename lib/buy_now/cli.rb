@@ -9,14 +9,22 @@ class BuyNow::CLI
 
   def list_buy
     # here doc - http://blog.jayfields.com/2006/12/ruby-multiline-strings-here-doc-or.html
-    puts "                   --------------------"
-    puts "                    Welcome to Buy Now!      ".yellow
-    puts "                   --------------------"
+    puts "                         --------------------"
+    puts "                          Welcome to Buy Now!      ".yellow
+    puts "                         --------------------"
     puts "\nToday's item to buy:".cyan
     @buy = BuyNow::Buy.buying
     @buy.each.with_index(1) do |now, i|
-      puts "#{i}. #{now.name} - #{now.price} - #{now.availability}"
+      puts "#{i}."
+      puts "Product: #{now.name}"
+      puts "Price: #{now.price}"
+      puts "Availability: #{now.availability}"
+      puts
     end
+  end
+
+  def goodbye
+    puts "See you tomorrow for more shopping 👋!!!".blue
   end
 
   def menu
@@ -34,9 +42,5 @@ class BuyNow::CLI
       goodbye
       end
     end
-  end
-
-  def goodbye
-    puts "See you tomorrow for more shopping 👋!!!".blue
   end
 end
