@@ -35,7 +35,7 @@ class BuyNow::CLI
 
       if input.to_i > 0
         the_now = @buy[input.to_i-1]
-        puts "#{the_now.name} - #{the_now.price} - #{the_now.availability}"
+        puts "#{the_now.name} - #{the_now.price} - #{the_now.availability}".yellow
       elsif input == "list"
         list_buy
       else
